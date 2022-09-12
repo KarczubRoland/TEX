@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage[english,magyar]{babel}
+\usepackage {t1enc}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{lipsum}
+\usepackage{hulipsum}
+\usepackage{blindtext}
+\linespread {1.6}
+\frenchspacing
+\begin{document}
+
+
+\textsc{kiskapitalis}
+\textbf{felkover}
+\textit{italic}
+\texttt {typewriter}
+\textsl{slanted}
+\textsf{sans}
+\emph{\textit{italicMas}}
+
+
+\framebox{\reflectbox{fuggolegestukrozes}}
+\scalebox{2}[-1]{nyujtasvizszintes}
+\rotatebox{90}{90fokosForgatas}
+\rotatebox{270}{270fokosForgatas}
+\colorbox{black}{\textcolor{white}{szoveg}}
+\fcolorbox{red}{white}{\textcolor{red}{szoveg}}
+
+
+\blindtext
+\framebox{\parbox{5cm}{\blindtext}}
+\raggedleft{\parbox{5cm}{\blindtext}}
+\selectlanguage {english}
+\today\\
+\selectlanguage {magyar}
+\today\\
+
+\title{Feladat}
+\author{Karczub Roland}
+\date{\today}
+\maketitle
+\blindtext
+
+
+\end{document}	
