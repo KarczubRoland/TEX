@@ -1,0 +1,62 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[inline]{enumitem}
+\usepackage{hulipsum}
+
+
+\begin{document}
+
+
+
+\begin{itemize*}[label=-,itemjoin*={    , és}]
+\item elso
+\item masodik 
+\item harmadik
+
+\end{itemize*}
+
+\begin{enumerate}
+\item elso-enumerate
+\begin{enumerate}
+\item masodik-enumerate
+\begin{enumerate}
+\item harmadik-enumerate
+\begin{enumerate}
+\item negyedik-enumerate
+
+\end{enumerate}
+\end{enumerate}
+\end{enumerate}
+\item[-] elso-kulon
+\item masodik-kulon
+\\
+\hulipsum[1-3]
+\\
+\item harmadik-kulon
+\end{enumerate}
+
+
+\begin{description}
+\item [cimke] \hulipsum[1-2]
+\item \hulipsum[1-2]
+\item[HOOOOOOSSSSZZZZUUUU CCCCCIIIIMMMKKKEEE] \hulipsum[1-5]
+\end{description}
+
+\includegraphics{kep.jpg}
+
+A kep fejjel lefele:
+
+\includegraphics[angle=180]{kep.jpg}
+\caption{Felirat}
+
+A kep felirattal:
+
+
+\begin { SCfigure }
+ \caption { Az univerzum képének ismételt felhasználása.
+Ez a felirat a jobb oldalon lesz VAGY NEM} 
+\includegraphics  { kep.jpg } 
+\end { SCfigure }
+
+\end{document}
+
