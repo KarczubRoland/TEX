@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage[magyar]{babel}
+\usepackage{t1enc}
+\usepackage{hulipsum}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+\newenvironment{lined}[1][Kulcsgondolatok]{\vspace{1ex}\hrule \begin{center}\textbf{#1}\end{center}\ignorespaces}{\vspace{1ex}\hrule\vspace{1ex}\ignorespacesafterend} 
+
+\newcounter{cnt}[section]
+\newcommand{\kgitem}{\par\noindent\makebox[3ex][l]{\stepcounter{cnt}\thecnt}}
+
+\begin{document}
+    \begin{lined}
+        \hulipsum[1]
+        \newline
+        \kgitem egy
+        \kgitem  egy gondolat bánt engemet...
+    \end{lined}
+\end{document}

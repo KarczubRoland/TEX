@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage[magyar]{babel}
+\usepackage{t1enc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\newcommand{\logof}[2][2]{\log_{#1}(#2)}
+
+\DeclarePairedDelimiter{\ceiling}{\lceil}{\rceil}
+
+\DeclarePairedDelimiter{\sqrbrckt}{[}{]}
+\newcommand{\EV}[1]{\mathbb{E}\sqrbrckt*{#1}} 
+
+\DeclarePairedDelimiterX{\sqrcond}[2]{[}{]}{#1\;\delimsize\vert\;#2}
+\newcommand{\expval}[2]{\mathbb{E}\sqrcond*{#1}{#2}}
+
+\begin{document}
+    \[ x^* := \displaystyle\argmax_{x\in[0,1]} x \logof{x}.\]
+    \newline
+    \[ \ceiling{x}, \ceiling*{\dfrac{5}{3}} \]
+    \newline
+    \[ \EV{\sum_{i=1}^N X_i} = \EV{\expval{\sum_{i=1}^N X_i}{N}} \]
+\end{document}

@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage[magyar]{babel}
+\usepackage{t1enc}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+\begin{document}
+
+    Tekintsük az $L = \{0, 1\}$ halmazt, és rajta a következő, igazságtáblával definiált műveleteket:
+    \[
+    \begin{array}{c||c}
+        x & \overline{x} \\ \hline
+        0 & 1 \\
+        1 & 0
+    \end{array}
+    \quad
+    \begin{array}{cc||c|c|c}
+        x & y & x \vee y  & x \wedge y  & x \rightarrow y \\ \hline
+        0 & 0 & 0 & 0 & 1 \\
+        0 & 1 & 1 & 0 & 1 \\
+        1 & 0 & 1 & 0 & 0 \\
+        1 & 1 & 1 & 1 & 1 \\
+    \end{array}
+    \]
+    Legyenek $a, b, c, d \in L.$ Belátjuk a következő azonosságot:
+        \[ (a \wedge b \wedge c) \rightarrow d = a \rightarrow \bigl(b \rightarrow (c \rightarrow d)\bigr) \]
+    A következő azonosságokat bizonyítás nélkül használjuk:
+        \[x \rightarrow y = \overline{x} \vee y\]
+        \[\overline{x \vee y} = \overline{x} \wedge \overline{y} 
+          \quad
+          \overline{x \wedge y} = \overline{x} \vee \overline{y}\]
+    A (3) bal oldala, (4) felhasználásával
+        \[ (a \wedge b \wedge c) \rightarrow d \underset{(4a)}{=} \overline{a \wedge b \wedge c} \vee d \underset{(4b)}{=} (\overline{a} \vee \overline{b} \vee \overline{c}) \vee d. \]
+    A (3) jobb oldala, (4a) ismételt felhasználásával
+    \begin{align*}
+        a \rightarrow (b \rightarrow (c \rightarrow d)) &= \overline{a} \vee \bigl(b \rightarrow (c \rightarrow d)\bigr) \\
+        &= \overline{a} \vee \bigl(\overline{b} \vee (c \rightarrow d)\bigr) \\
+        &= \overline{a} \vee \bigl(\overline{b} \vee (\overline{c} \vee d)\bigr),
+    \end{align*}
+    ami a $\vee$ asszociativitása miatt egyenlő (5) egyenlettel.
+\end{document} s

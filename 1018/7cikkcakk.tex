@@ -1,0 +1,13 @@
+\documentclass{article}
+\usepackage[magyar]{babel}
+\usepackage{t1enc}
+\usepackage{ifthen}
+\usepackage{multicol}
+
+\begin{document}
+    \newcounter{y}
+    \begin{multicols}{4}
+        \whiledo{\value{y}<60}{\stepcounter{y}\they\par}
+    \end{multicols}
+    
+\end{document} 

@@ -1,0 +1,15 @@
+\documentclass{article}
+\usepackage[magyar]{babel}
+\usepackage{t1enc}
+\usepackage{hulipsum}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+\newenvironment{lined}[1][Kulcsgondolatok]{\par\begin{minipage}{0.8\textwidth}\vspace{1ex}\hrule \begin{center}\textbf{#1}\end{center}\ignorespaces}{\vspace{1ex}\hrule\vspace{1ex}\end{minipage}\ignorespacesafterend}
+
+\begin{document}
+    \begin{lined}
+            \hulipsum[1]
+    \end{lined}
+\end{document}

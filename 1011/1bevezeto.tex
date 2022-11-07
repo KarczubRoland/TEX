@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage[magyar]{babel}
+\usepackage{t1enc}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{xcolor}
+
+\begin{document}
+
+    \begin{enumerate}[label=\alph*)]
+    \item 
+        Az $ \frac{1}{n^2} $ sorösszege:
+            \[ \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}. \]
+    
+    \item
+        Az $n!\text{ }(n \text{ faktoriális})$ a számok szorzata 1-től $n$-ig, azaz
+            \begin{equation}
+                n! := \prod_{k=1}^n k = 1\cdot2\cdot...\cdot n.
+            \end{equation}
+        Konvenció szerint 0! = 1.
+    
+    \item
+        Legyen $0 \leq k \leq n. $ A binomiális együttható
+            \[ \binom{n}{k} := \frac{n!}{k! \cdot (n-k)!}, \]
+        ahol a faktoriálist (\textcolor{red}{1}) szerint definiáljuk.
+    
+    \item
+        Az előjel- azaz szignum függvényt a következőképpen definiáljuk:
+            \[ sgn(x) := \begin{cases}
+                            1, & \text{ha } x > 0, \\
+                            0, & \text{ha } x = 0, \\
+                            -1, & \text{ha } x < 0.
+                         \end{cases}\]
+                     
+    \end{enumerate}
+\end{document}

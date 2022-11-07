@@ -1,0 +1,55 @@
+\documentclass{book}
+\usepackage[magyar]{babel}
+\usepackage{t1enc}
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage[citebordercolor=white, citecolor=green, linkbordercolor=white, linkcolor=blue]{hyperref}
+\usepackage{imakeidx}
+\usepackage[backend=bibtex, style=numeric, sorting=nyt, hyperref=true, backref]{biblatex}
+\usepackage{csquotes}
+\usepackage{tocbibind}
+
+\addbibresource{ltx.bib}
+
+\makeindex[columns=2, intoc]
+\makeindex[name=people, title=Második]
+
+\begin{document}
+
+    \frontmatter
+        \title{Könyv}
+        \author{Karczub Roland}
+        \maketitle
+    
+        \tableofcontents
+        \index{tartalomjegyzek@\textit{tartalomjegyzék}}
+    
+    \mainmatter
+        \chapter{Első fejezet}
+            \index[people]{fejezet vége|)}
+            \cite{abrharber03}
+            \index{elso@első|see{második, albejegyzés2}}
+            \lipsum[2-7]
+            \index{dupla}
+            \cite{knuth84}
+        \chapter{Második fejezet}
+            \lipsum[3-5]
+            \index{második}
+            \index{második@albejegyzés1}
+            \index{második@albejegyzés2}
+            \index{második@albejegyzés2@alalbejegyzés}
+        \chapter{Harmadik fejezet}
+            \lipsum[1]
+            \index{dupla}
+            \cite{g4gbin}
+            \index[people]{random}
+            \lipsum[8]
+            \index{harmadik|textbf}
+            
+    \backmatter
+        \indexprologue[\medskip]{tárgymutató leírása}
+        \printindex
+        \printbibliography[title=Irodalomjegyzék]
+        \printindex[people]
+    
+\end{document}

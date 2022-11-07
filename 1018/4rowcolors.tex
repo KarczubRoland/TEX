@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage[magyar]{babel}
+\usepackage{t1enc}
+\usepackage{ifthen}
+\usepackage{array}
+\usepackage[table]{xcolor}
+\usepackage{multirow}
+
+%\newcolumntype{a}{>{\ifthenelse{\isodd{\value{rownum}}}{\color{black}}{\color{white}}}c}
+
+\begin{document}
+    
+    \rowcolors{1}{white}{black!20}
+    \begin{tabular}{ccc}
+        \ifthenelse{\isodd{\value{rownum}}}{\color{black}}{\color{white}} a & b & c\\
+        \ifthenelse{\isodd{\rownum}}{\color{black}}{\color{white}} a & b & c\\
+        a & b & c\\
+        a & b & c\\
+        a & b & c
+    \end{tabular}
+    
+\end{document}

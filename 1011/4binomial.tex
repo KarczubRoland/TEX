@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage[magyar]{babel}
+\usepackage{t1enc}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{xcolor}
+
+\begin{document}
+\begin{subequations}
+    \begin{align}
+        (a+b)^{n+1} &= (a+b) \cdot \left( \sum_{k=0}^n \binom{n}{k} a^{n-k}b^k \right) \\
+        \nonumber &= \cdots \\
+        &= \sum_{k=0}^n \binom{n}{k} a^{(n+1)-k}b^k + \sum_{k=1}^{n+1} \binom{n}{k-1} a^{(n+1)-k}b^{k} \\
+        \nonumber &= \cdots \\
+        \begin{split}
+            &=\binom{n+1}{0} a^{n+1-0} b^0 + \sum_{k=1}^n \binom{n+1}{k} a^{(n+1)-k}b^k \\
+            &+ \binom{n+1}{n+1} a^{n+1-(n+1)} b^{n+1} 
+        \end{split} \\
+        &= \sum_{k=0}^{n+1} \binom{n+1}{k} a^{(n+1)-k}b^k
+    \end{align}
+\end{subequations}
+\end{document}

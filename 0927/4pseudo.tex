@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage[magyar]{babel}
+\usepackage{t1enc}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+
+\algblockdefx{DoWhile}{Do}{While}{\textbf{do}}[1]{\textbf{while}~(#1)~}
+
+\algcblockdefx[Switch]{Switch}{Case}{Default}[1]{\textbf{case}~#1~:}{\textbf{default}}
+
+
+\floatname{algorithm}{Algoritmus}
+\renewcommand{\listalgorithmname}{Algoritmusok listája}
+
+\begin{document}
+
+\listofalgorithms
+
+\begin{algorithm}
+    \begin{algorithmic}[2]
+        \Procedure{QUICKSORT}{@A,a,b}
+            \Require A írható tömb
+            \Require 1 $<$ a $<$ b $<$ Hossz[A] indexek
+            \Ensure a-b indextartományt rendezzük
+            \If{a=b}
+            \State \Return{A}  \Comment{ egyelemű tömb mindig rendezett}
+            \Else
+            \State FELOSZT(@A,a,b,A(a),@q) \Comment{k=A(a), a tartomány első eleme}
+            \State QUICKSORT(@A,a,q)
+            \State QUICKSORT(@A,q+1,b)
+            \State \Return{A}
+            \EndIf
+        \EndProcedure
+    \end{algorithmic}
+    \caption{Gyorsrendezés}
+\end{algorithm}
+
+\begin{algorithmic}
+    \Do
+    \State x-1
+    \While{x>0}
+\end{algorithmic}
+
+\begin{algorithmic}
+    \Switch{a}
+    \Case{a<0}
+    \State a negatív
+    \Case{a=0}
+    \State a nulla
+    \Case{a<0}
+    \State a pozitív
+    \Default
+    \State nem eldönthető
+\end{algorithmic}
+
+
+\end{document}

@@ -1,0 +1,54 @@
+\documentclass{book}
+\usepackage[magyar]{babel}
+\usepackage{t1enc}
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage[backref=section, citebordercolor=white, citecolor=green, linkbordercolor=white, linkcolor=blue]{hyperref}
+\usepackage{imakeidx}
+\usepackage{tocbibind}
+
+\makeindex
+\makeindex[name=people, title=Második]
+\renewcommand{\bibname}{Források}
+
+\begin{document}
+
+    \frontmatter
+        \title{Könyv}
+        \author{Karczub Roland}
+        \maketitle
+    
+        \tableofcontents
+        \index{tartalomjegyzek@\textit{tartalomjegyzék}}
+    
+    \mainmatter
+        \chapter{Első fejezet}
+            \index[people]{fejezet vége|)}
+            \cite{abrharber03}
+            \index{elso@első|see{második, albejegyzés2}}
+            \lipsum[2-7]
+            \index{dupla}
+            \cite{knuth84}
+        \chapter{Második fejezet}
+            \lipsum[3-5]
+            \index{második}
+            \index{második@albejegyzés1}
+            \index{második@albejegyzés2}
+            \index{második@albejegyzés2@alalbejegyzés}
+        \chapter{Harmadik fejezet}
+            \lipsum[1]
+            \index{dupla}
+            \cite{g4gbin}
+            \index[people]{random}
+            \lipsum[8]
+            \index{harmadik|textbf}
+            
+    \backmatter
+        \printindex
+    
+        \bibliographystyle{plain}
+        \bibliography{ltx.bib}
+        
+        \printindex[people]
+    
+\end{document}

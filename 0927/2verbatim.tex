@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage[magyar]{babel}
+\usepackage{t1enc}
+\usepackage{lipsum}
+\usepackage{float}
+
+\newfloat{forraskod}{hbt}{lop}[section]
+
+\begin{document}
+    egy sor \verb | random karakterek */~ˇˇ() \textbf{hello} | folytatás \verb | második verbatim :,? | sima szöveg \verb | még egy %!+- | újra rendes
+    
+    \listof{forraskod}{Tartalomjegyzék}
+    \clearpage
+
+    \lipsum[1]
+    
+    \begin{forraskod}
+        \begin{verbatim}
+            Tétel környezet kódja:
+                Preambulum:
+                    \newtheorem{típus}[számozás módja]{név}
+                Document:
+                    \begin{típus}
+                        Szöveg...
+                    \end{típus}
+        \end{verbatim}
+        \caption{Felirat 1.}
+    \end{forraskod}
+    
+    \lipsum[2-3]
+    
+    \begin{forraskod}
+        \begin{verbatim}
+            Lista kódja:
+                \begin{enumerate}
+                    \item egy
+                    
+                    \begin{itemize}
+                        \item második szint
+                    \end{itemize}
+                    
+                    \item kettő
+                \end{enumerate}
+        \end{verbatim}
+        \caption{Felirat 2.}
+    \end{forraskod}
+    
+\end{document}

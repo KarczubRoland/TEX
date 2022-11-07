@@ -1,0 +1,38 @@
+\documentclass[aspectratio=169, bigger, xcolor=table]{beamer}
+\usepackage[magyar]{babel}
+\usepackage{t1enc}
+\usepackage{lipsum}
+
+\begin{document}
+
+    \begin{frame}
+        \author{Karczub Roland}
+        \title{Cím dia}
+        \subtitle{Cím dia alcíme}
+        
+        \maketitle
+    \end{frame}
+
+    \begin{frame}{Cím}{Alcím}
+        sima
+        \newline
+        még pár szó
+    \end{frame}
+    
+    \begin{frame}[fragile]{Verbatim}
+        \begin{verbatim}
+            Tétel környezet kódja:
+                Preambulum:
+                    \newtheorem{típus}[számozás módja]{név}
+                Document:
+                    \begin{típus}
+                        Szöveg...
+                    \end{típus}
+        \end{verbatim}
+    \end{frame}
+    
+    \begin{frame}[allowframebreaks]{Tördelt}
+        \lipsum[2-5]
+    \end{frame}
+    
+\end{document}

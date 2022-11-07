@@ -1,0 +1,79 @@
+\documentclass{article}
+\usepackage[magyar]{babel}
+\usepackage{t1enc}
+\usepackage{amsthm}
+
+ \theoremstyle{plain}
+\newtheorem{tet}{Tétel}
+\newtheorem{lem}[tet]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{defin}{Definíció}
+
+\theoremstyle{remark}
+\newtheorem{fld}{Feladat}[section]
+\newtheorem*{rem}{Megjegyzés}
+
+
+\begin{document}
+
+    \begin{defin}
+        A derékszögű háromszög...
+    \end{defin}
+    
+    \begin{tet}[Pitagorasz]
+        Pitagorasz tétele...
+    \end{tet}
+    
+    \begin{proof}[Pitagorasz tétel bizonyítása]
+        Készítsünk két darab... \qedhere
+    \end{proof}
+    
+    \begin{lem}
+        A háromszögnek 3 oldala van.
+    \end{lem}
+    
+    
+    \section{Első}
+    
+        \begin{fld}
+            I. Első feladat
+        \end{fld}
+    
+        \begin{fld}
+            I. Második feladat
+        \end{fld}
+        
+        \begin{fld}
+            I. Plusz feladat
+        \end{fld}
+        
+    
+    \section{Második}
+    
+        \begin{fld}
+            II. Első feladat
+        \end{fld}
+    
+        \begin{fld}
+            II. Második feladat
+        \end{fld}
+        
+        \begin{fld}
+            II. Plusz feladat
+        \end{fld}
+        
+        \begin{rem}
+            Nem kötelező
+        \end{rem}
+        
+        
+        \begin{defin}
+            Egy háromszögben...
+        \end{defin}
+    
+        \begin{tet}[Háromszög egyenlőtlenség]
+             A háromszög bármely oldalának...
+        \end{tet}
+
+\end{document}

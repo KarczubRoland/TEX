@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage[magyar]{babel}
+\usepackage{t1enc}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\begin{document}
+
+    \begin{enumerate}[label=\alph*)]
+    \item 
+        Legyen
+            \[ [n] := \{ 1, 2, \cdot \cdot \cdot , n \}\]
+        a természetes számok halmaza 1-től $n$-ig.
+    
+    \item
+       Egy $n$-edrendű \textit{permutáció} $\sigma$ egy bijekció $[n]$-ből $[n]$-be. Az $n$-edrendű permutációk halmazát, az ún. szimmetrikus csoportot, $S_n$-nel jelöljük.
+    
+    \item
+        Egy $\sigma \in S_n$ permutációban inverziónak nevezünk egy $(i, j)$ párt, ha $i < j$
+        de $\sigma_i > \sigma_j.$
+    
+    \item
+       Egy $\sigma \in S_n$ permutáció paritásának az inverziók számát nevezzük:
+        \[ \mathcal{I}(\sigma) := \Bigl\vert \{(i, j) | i, j \in [n], i < j, \sigma_i > \sigma_j\} \Bigr\vert . \]
+
+    \item
+        Legyen $ A \in \mathbb{R}^{n\times n} $, egy $n \times n$-es (négyzetes) valós mátrix:
+                     \[ A = \left( \begin{matrix}
+                                    a_11 & a_12 & \cdots & a_1n \\
+                                    a_21 & a_22 & \cdots & a_2n \\
+                                    \rotatebox{90}{$\cdots$} & \rotatebox{90}{$\cdots$} & \rotatebox{135}{$\cdots$} & \rotatebox{90}{$\cdots$}\\
+                                    a_n1 & a_n2 & \cdots & a_nn \\
+                                \end{matrix} \right) \]
+        Az $A$ mátrix determinánsát a következőképpen definiáljuk:
+                    \[ A = \left\vert \begin{matrix}
+                                    a_11 & a_12 & \cdots & a_1n \\
+                                    a_21 & a_22 & \cdots & a_2n \\
+                                    \rotatebox{90}{$\cdots$} & \rotatebox{90}{$\cdots$} & \rotatebox{135}{$\cdots$} & \rotatebox{90}{$\cdots$}\\
+                                    a_n1 & a_n2 & \cdots & a_nn \\
+                                \end{matrix} \right\vert 
+                                := \sum_{a \in S_n} (-1)^{\mathcal{I}(\sigma)} \prod_{i=1}^n a_{i\sigma_i} \]
+        
+    \end{enumerate}
+\end{document}
